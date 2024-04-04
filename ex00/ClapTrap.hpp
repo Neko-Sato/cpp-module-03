@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 05:51:54 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/04 06:19:26 by hshimizu         ###   ########.fr       */
+/*   Updated: 2024/04/04 06:44:43 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,7 @@ private:
 	unsigned int _attack_damage;
 
 public:
-	ClapTrap(
-		std::string name = "",
-		unsigned int hit_points = 10,
-		unsigned int energy_points = 10,
-		unsigned int attack_damage = 0);
+	ClapTrap(std::string name = "");
 	~ClapTrap(void);
 
 	void attack(const std::string &target);

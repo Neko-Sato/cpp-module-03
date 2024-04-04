@@ -6,21 +6,17 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 05:51:58 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/04 06:18:44 by hshimizu         ###   ########.fr       */
+/*   Updated: 2024/04/04 06:45:08 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap(
-	std::string name,
-	unsigned int hit_points,
-	unsigned int energy_points,
-	unsigned int attack_damage) : _name(name),
-								  _hit_points(hit_points),
-								  _energy_points(energy_points),
-								  _attack_damage(attack_damage)
+ClapTrap::ClapTrap(std::string name) : _name(name),
+									   _hit_points(10),
+									   _energy_points(10),
+									   _attack_damage(0)
 
 {
 	std::cout << "ClapTrap create " << _name << std::endl;

@@ -4,6 +4,7 @@
 int main()
 {
 	ClapTrap clapTrap("Clappy");
+
 	clapTrap.attack("Enemy");
 	clapTrap.takeDamage(10);
 	clapTrap.beRepaired(5);
