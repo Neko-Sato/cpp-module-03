@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 09:01:41 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/25 19:36:21 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/01/10 20:14:10 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 #include "ClapTrap.hpp"
 
 class FragTrap : virtual public ClapTrap {
- public:
-  static const unsigned int default_hit_points = 100;
-  static const unsigned int default_energy_points = 100;
-  static const unsigned int default_attack_damage = 30;
+public:
+  static unsigned int const default_hit_points;
+  static unsigned int const default_energy_points;
+  static unsigned int const default_attack_damage;
 
-  FragTrap(std::string name = "");
-  virtual ~FragTrap(void);
-  FragTrap(const FragTrap& other);
-  virtual FragTrap& operator=(const FragTrap& other);
+  FragTrap(std::string const &name = "");
+  virtual ~FragTrap();
+  FragTrap(FragTrap const &rhs);
+  FragTrap &operator=(FragTrap const &rhs);
 
   void highFivesGuys(void);
 };

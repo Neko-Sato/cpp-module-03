@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 10:53:42 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/25 19:32:35 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/01/10 20:15:21 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,22 @@
 #include "ScavTrap.hpp"
 
 class DiamondTrap : public ScavTrap, public FragTrap {
- private:
+private:
   std::string _name;
 
- public:
-  DiamondTrap(std::string name);
-  ~DiamondTrap(void);
+public:
+  using FragTrap::default_attack_damage;
+  using FragTrap::default_hit_points;
+  using ScavTrap::default_energy_points;
 
-  DiamondTrap(const DiamondTrap& other);
-  DiamondTrap& operator=(const DiamondTrap& other);
+  DiamondTrap(std::string const &name = "");
+  ~DiamondTrap();
+
+  DiamondTrap(DiamondTrap const &rhs);
+  DiamondTrap &operator=(DiamondTrap const &rhs);
 
   void whoAmI(void);
-  void attack(const std::string& target);
+  using ScavTrap::attack;
 };
 
 #endif

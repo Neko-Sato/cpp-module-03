@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 07:45:22 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/25 19:31:23 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/01/10 20:14:11 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,36 @@
 
 #include <iostream>
 
-ScavTrap::ScavTrap(std::string name)
-    : ClapTrap(name, 100, 50, 20), _gatekeeper_mode(false) {
+unsigned int const ScavTrap::default_hit_points = 100;
+unsigned int const ScavTrap::default_energy_points = 50;
+unsigned int const ScavTrap::default_attack_damage = 20;
+
+ScavTrap::ScavTrap(std::string const &name)
+    : ClapTrap(name, default_hit_points, default_energy_points,
+               default_attack_damage),
+      _gatekeeper_mode(false) {
   std::cout << "ScavTrap default constructor called " << _name << std::endl;
 }
 
 ScavTrap::~ScavTrap(void) {
   std::cout << "ScavTrap deconstructor called " << _name << std::endl;
 }
-ScavTrap::ScavTrap(const ScavTrap &other)
-    : ClapTrap(other), _gatekeeper_mode(other._gatekeeper_mode) {
+
+ScavTrap::ScavTrap(ScavTrap const &rhs)
+    : ClapTrap(rhs), _gatekeeper_mode(rhs._gatekeeper_mode) {
   std::cout << "ScavTrap copy constructor called " << _name << std::endl;
 }
 
-ScavTrap &ScavTrap::operator=(const ScavTrap &other) {
+ScavTrap &ScavTrap::operator=(ScavTrap const &rhs) {
   std::cout << "ScavTrap assignation operator called " << _name << std::endl;
-  ClapTrap::operator=(other);
-  _gatekeeper_mode = other._gatekeeper_mode;
+  ClapTrap::operator=(rhs);
+  if (this != &rhs) {
+    _gatekeeper_mode = rhs._gatekeeper_mode;
+  }
   return *this;
 }
 
-void ScavTrap::attack(const std::string &target) {
+void ScavTrap::attack(std::string const &target) {
   std::cout << "ScavTrap " << _name << " ";
   if (!_hit_points)
     std::cout << "already dead...";

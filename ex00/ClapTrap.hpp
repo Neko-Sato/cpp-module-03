@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 05:51:54 by hshimizu          #+#    #+#             */
-/*   Updated: 2024/04/25 19:31:35 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/01/10 20:14:10 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,26 @@
 #include <string>
 
 class ClapTrap {
- private:
+private:
   std::string _name;
   unsigned int _hit_points;
   unsigned int _energy_points;
   unsigned int _attack_damage;
 
- public:
-  ClapTrap(std::string name = "");
-  ~ClapTrap(void);
-  ClapTrap(const ClapTrap& other);
-  ClapTrap& operator=(const ClapTrap& other);
+  ClapTrap(std::string const &name, unsigned int hit_points,
+           unsigned int energy_points, unsigned int attack_damage);
 
-  void attack(const std::string& target);
+public:
+  static unsigned int const default_hit_points;
+  static unsigned int const default_energy_points;
+  static unsigned int const default_attack_damage;
+
+  ClapTrap(std::string const &name = "");
+  ~ClapTrap();
+  ClapTrap(ClapTrap const &rhs);
+  ClapTrap &operator=(ClapTrap const &rhs);
+
+  void attack(std::string const &target);
   void takeDamage(unsigned int amount);
   void beRepaired(unsigned int amount);
 };
