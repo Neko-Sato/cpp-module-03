@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 05:51:58 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/01/10 20:14:10 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/01/10 20:22:45 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ClapTrap::ClapTrap(std::string const &name)
   std::cout << "ClapTrap default constructor called " << _name << std::endl;
 }
 
-ClapTrap::~ClapTrap(void) {
+ClapTrap::~ClapTrap() {
   std::cout << "ClapTrap deconstructor called " << _name << std::endl;
 }
 

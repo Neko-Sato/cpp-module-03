@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 07:45:22 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/01/10 20:14:10 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/01/10 20:22:15 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ ScavTrap::ScavTrap(std::string const &name)
   std::cout << "ScavTrap default constructor called " << _name << std::endl;
 }
 
-ScavTrap::~ScavTrap(void) {
+ScavTrap::~ScavTrap() {
   std::cout << "ScavTrap deconstructor called " << _name << std::endl;
 }
 

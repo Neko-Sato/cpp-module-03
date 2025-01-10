@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 09:02:45 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/01/10 20:14:10 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/01/10 20:22:24 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ FragTrap::FragTrap(std::string const &name)
   std::cout << "FragTrap default constructor called " << _name << std::endl;
 }
 
-FragTrap::~FragTrap(void) {
+FragTrap::~FragTrap() {
   std::cout << "FragTrap deconstructor called " << _name << std::endl;
 }
 
