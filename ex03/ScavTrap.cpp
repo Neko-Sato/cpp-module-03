@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 07:45:22 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/03/31 21:51:41 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:54:56 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ScavTrap::ScavTrap(ScavTrap const &rhs)
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &rhs) {
   std::cout << "ScavTrap assignation operator called " << _name << std::endl;
-  if (&typeid(ScavTrap) == &typeid(rhs))
+  if (&typeid(ScavTrap) == &typeid(*this))
     ClapTrap::operator=(rhs);
   if (this != &rhs) {
     _gatekeeper_mode = rhs._gatekeeper_mode;
