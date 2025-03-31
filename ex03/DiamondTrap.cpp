@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 10:58:09 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/01/10 20:21:24 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:51:45 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ DiamondTrap::DiamondTrap(DiamondTrap const &rhs)
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &rhs) {
   std::cout << "DiamondTrap assignation operator called " << _name << std::endl;
-  ClapTrap::operator=(rhs);
+  if (&typeid(DiamondTrap) == &typeid(rhs))
+    ClapTrap::operator=(rhs);
   ScavTrap::operator=(rhs);
   FragTrap::operator=(rhs);
   return *this;

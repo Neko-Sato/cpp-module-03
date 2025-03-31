@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 09:02:45 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/01/10 20:21:58 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/03/31 21:51:18 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ FragTrap::FragTrap(FragTrap const &rhs) : ClapTrap(rhs) {
 
 FragTrap &FragTrap::operator=(FragTrap const &rhs) {
   std::cout << "FragTrap assignation operator called " << _name << std::endl;
-  ClapTrap::operator=(rhs);
+  if (&typeid(FragTrap) == &typeid(rhs))
+    ClapTrap::operator=(rhs);
   return *this;
 }
 
