@@ -6,13 +6,14 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 09:02:45 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/03/31 21:54:59 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:34:05 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 #include <iostream>
+#include <typeinfo>
 
 unsigned int const FragTrap::default_hit_points = 100;
 unsigned int const FragTrap::default_energy_points = 100;

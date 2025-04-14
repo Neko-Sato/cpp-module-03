@@ -6,13 +6,14 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 10:58:09 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/03/31 21:55:04 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:34:06 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 #include <iostream>
+#include <typeinfo>
 
 DiamondTrap::DiamondTrap(std::string const &name)
     : ClapTrap(name + "_clap_trap", default_hit_points, default_energy_points,

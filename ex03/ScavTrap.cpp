@@ -6,13 +6,14 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 07:45:22 by hshimizu          #+#    #+#             */
-/*   Updated: 2025/03/31 21:54:56 by hshimizu         ###   ########.fr       */
+/*   Updated: 2025/04/14 21:34:02 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 #include <iostream>
+#include <typeinfo>
 
 unsigned int const ScavTrap::default_hit_points = 100;
 unsigned int const ScavTrap::default_energy_points = 50;
